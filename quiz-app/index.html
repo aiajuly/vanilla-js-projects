@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="question-answers">
+                <p class="question">Question: The United States bought Alaska from which country?</p>
+                <ul class="answers-list">
+                    <li>
+                        <input type="radio" id="a" name="answer" class="answer">
+                        <label for="a" id="a-text"></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="b" name="answer" class="answer">
+                        <label for="b" id="b-text"></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c" name="answer" class="answer">
+                        <label for="c" id="c-text"></label>
+                    </li>
+                </ul>
+            </div>
+            <button class="submit-btn">Submit</button>
+        </div>
+
+        <div class="end-card hide">
+            <div class="score-message">your score is <span class="score"></span>/4</div>
+            <button class="reload-btn">Reload</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
