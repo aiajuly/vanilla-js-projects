@@ -11,6 +11,10 @@ const fetchImages = async function(){
 
     searchTerm = document.querySelector('#search-term').value;
 
+    if(!searchTerm){
+        return
+    }
+
     const clientId = 'TnCPFnau_8NghqJBD1DciTE_im7SrP5OJLrigDzUtqM';
     const perPage = 9;
     url = `https://api.unsplash.com/search/photos?page=${pageCount}&per_page=${perPage}&query=${searchTerm}&client_id=${clientId}`;
@@ -58,6 +62,9 @@ const displayImages = function(imagesData){
 
 searchBtnEl.addEventListener('click', (ev) => {
     ev.preventDefault();
+
+    searchResultsEl.innerHTML = "";
+
     fetchImages();
 });
 
